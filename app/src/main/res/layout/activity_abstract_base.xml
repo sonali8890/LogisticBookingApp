@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.AbstractBaseActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/back"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:src="@mipmap/logo" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar" />
+    </RelativeLayout>
+</layout>

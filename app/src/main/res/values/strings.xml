@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PorterTestApp</string>
+    <string name="book_now">BOOK NOW</string>
+    <string name="search_for_locallity">Search for a locality or landmark</string>
+    <string name="from">From</string>
+    <string name="destination">Destination</string>
+    <string name="cost_text">\u20B9{0} \u2022 {1} mins</string>
+    <string name="enter_pickup_location">Enter pickup location</string>
+    <string name="enter_drop_location">Enter drop location</string>
+</resources>

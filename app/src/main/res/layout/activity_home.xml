@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/locationMap"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:background="@drawable/white_rect_with_grey_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fromTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="-4sp"
+                android:singleLine="true"
+                 android:text="@string/from"
+                android:textSize="10sp"
+                android:textColor="@color/title_textview"
+                 />
+            <TextView
+                android:id="@+id/fromTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="-4sp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                tools:text="kjkkj"
+                android:visibility="gone"
+                android:textColor="@color/normal_textview"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="11dp"
+                android:background="@color/pinkish_grey" />
+
+            <TextView
+                android:id="@+id/ToTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="-4sp"
+                android:text="@string/destination"
+                android:singleLine="true"
+                android:textColor="@color/title_textview"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/ToTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="-4sp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:visibility="gone"
+                tools:text="kjkkj"
+                android:textColor="@color/normal_textview"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/locationPin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/blue_rect"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/costTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="-2sp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:text="999" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/pinkish_grey" />
+
+            <TextView
+                android:id="@+id/bookNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:lineSpacingExtra="-2sp"
+                android:text="BOOK NOW"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/locationPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/location_pin" />
+
+    </RelativeLayout>
+</layout>

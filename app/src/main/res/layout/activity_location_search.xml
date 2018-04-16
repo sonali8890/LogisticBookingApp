@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="@color/activity_bg"
+        android:orientation="vertical"
+        tools:context=".view.locationsearch.LocationSearchActivity">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_rect_with_grey_border"
+            android:hint="@string/search_for_locallity"
+            android:drawableLeft="@mipmap/search"
+            android:drawablePadding="8dp"
+            android:lineSpacingExtra="-2sp"
+            android:padding="15dp"
+            android:textColor="@color/normal_textview"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recentItemRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_rect_with_grey_border"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_rect_with_grey_border"
+            />
+
+
+    </LinearLayout>
+</layout>

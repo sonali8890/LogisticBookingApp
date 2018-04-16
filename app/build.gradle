@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.sonali.portertestapp"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+ext {
+    supportLib = '27.1.0'
+    retrofitVersion = '2.1.0'
+    retrofitLoggerVersion = '3.8.0'
+    rxJavaVersion = '2.0.5'
+    rxAndroidVersion = '2.0.1'
+    rxJavaAdapterVersion = '1.0.0'
+    playServiceVersion = '11.0.0'
+    daggerVersion = '2.10'
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$supportLib"
+    implementation "com.android.support:design:$supportLib"
+
+
+    implementation "com.squareup.okhttp3:logging-interceptor:$retrofitLoggerVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rxJavaAdapterVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+
+
+    implementation "com.google.android.gms:play-services-location:$playServiceVersion"
+    implementation "com.google.android.gms:play-services-maps:$playServiceVersion"
+}

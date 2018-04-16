@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/mLocationAutoSuggestListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+       android:padding="12dp">
+
+        <ImageView
+             android:id="@+id/icon"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/combined_shape" />
+
+        <TextView
+            android:id="@+id/placeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#202020"
+            android:text="jhgshgas"
+            android:singleLine="true"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</layout>
